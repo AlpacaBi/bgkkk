@@ -1,0 +1,37 @@
+C51 COMPILER V9.00   DIANJI                                                                06/16/2016 19:24:01 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE DIANJI
+OBJECT MODULE PLACED IN dianji.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE dianji.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <main.h>
+   3          
+   4          void lock_on()
+   5          {
+   6   1               dianji=1;
+   7   1      }
+   8          
+   9          void lock_off()
+  10          {       
+  11   1               dianji=0;
+  12   1      }
+  13            
+  14               
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      6    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

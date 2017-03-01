@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+G:\ÏîÄ¿\rfid\bgkkk\RC522.uvproj
+Project File Date:  03/26/2016
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling MAIN.c...
+compiling RC522.C...
+compiling dianji.c...
+compiling 12864.c...
+compiling jiance.c...
+linking...
+BL51 BANKED LINKER/LOCATER V6.22 - SN: Eval Version
+COPYRIGHT KEIL ELEKTRONIK GmbH 1987 - 2009
+"STARTUP.obj",
+"MAIN.obj",
+"RC522.obj",
+"dianji.obj",
+"12864.obj",
+"jiance.obj" 
+TO "RC522" 
+RAMSIZE(256) 
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0809H BYTE (100%) *
+******************************************************************************
+Program Size: data=66.1 xdata=0 code=2185
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+*** FATAL ERROR L250: CODE SIZE LIMIT IN RESTRICTED VERSION EXCEEDED
+    MODULE:  C:\KEIL\C51\LIB\C51S.LIB (-----)
+    LIMIT:   0800H BYTES
+Target not created

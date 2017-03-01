@@ -1,0 +1,54 @@
+C51 COMPILER V9.00   JIANCE                                                                06/16/2016 19:24:02 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE JIANCE
+OBJECT MODULE PLACED IN jiance.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE jiance.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <main.h>
+   3          #include <mfrc522.h>
+   4          
+   5          void find_card_success()                  //寻卡成功响应函数
+   6          {   
+   7   1              beep=0;  delay_10ms(5); 
+   8   1              beep=1;  delay_10ms(5);
+   9   1      }
+  10          
+  11          void open_the_lock()                      //开锁，保持开锁状态一会儿，然后闭锁
+  12          {
+  13   1          lock_on();  delay_10ms(30);
+  14   1              lock_off(); delay_10ms(30);
+  15   1              dispwel();
+  16   1      }
+  17          
+  18          
+  19          void jiance()
+  20          {
+  21   1                   if(UID[0]==0x0b&&UID[1]==0x34&&UID[2]==0x52&&UID[3]==0x35) {disbgk(); open_the_lock(); }  //毕国康
+  22   1              else if(UID[0]==0x01&&UID[1]==0x02&&UID[2]==0x03&&UID[3]==0x04) {disbgk(); open_the_lock(); }  //毕国康的
+             -手机
+  23   1              else if(UID[0]==0xfb&&UID[1]==0x00&&UID[2]==0x1e&&UID[3]==0x25) {disyjj(); open_the_lock(); }  //杨炯建
+  24   1              else if(UID[0]==0x95&&UID[1]==0x59&&UID[2]==0xa0&&UID[3]==0x69) {discxq(); open_the_lock(); }  //陈贤权
+  25   1      
+  26   1              
+  27   1                        
+  28   1              else {diserr();  delay_10ms(60);  dispwel();}   //错误卡号界面
+  29   1      }
+  30                                                  
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    152    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,8 @@
+"STARTUP.obj",
+"MAIN.obj",
+"RC522.obj",
+"dianji.obj",
+"12864.obj",
+"jiance.obj" 
+TO "RC522" 
+RAMSIZE(256) 
